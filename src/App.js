@@ -31,7 +31,7 @@ const UNESCOProjectGenerator = () => {
   };
 
   const totalCost = (parseFloat(formData.buildingCosts) || 0) + (parseFloat(formData.runningCosts) || 0);
-  const sectorFunding = totalCost;
+  const sectorFunding = totalCost - (parseFloat(formData.regularSupport) || 0);
 
   if (showForm) {
     return (
@@ -344,9 +344,13 @@ const UNESCOProjectGenerator = () => {
               <td className="border border-gray-300 p-3">Running costs per year</td>
               <td className="border border-gray-300 p-3 text-right font-semibold">${(parseFloat(formData.runningCosts) || 0).toLocaleString()}</td>
             </tr>
+            <tr className="bg-gray-50">
+              <td className="border border-gray-300 p-3 font-semibold">Total project cost</td>
+              <td className="border border-gray-300 p-3 text-right font-semibold">${totalCost.toLocaleString()}</td>
+            </tr>
             <tr>
-              <td className="border border-gray-300 p-3">Regular IT support (covered by Central Services)</td>
-              <td className="border border-gray-300 p-3 text-right font-semibold text-green-600">${(parseFloat(formData.regularSupport) || 0).toLocaleString()}</td>
+              <td className="border border-gray-300 p-3">Amount covered by Central Services</td>
+              <td className="border border-gray-300 p-3 text-right font-semibold text-green-600">-${(parseFloat(formData.regularSupport) || 0).toLocaleString()}</td>
             </tr>
             <tr className="bg-blue-50">
               <td className="border border-gray-300 p-3 font-bold">Your sector needs to fund</td>
