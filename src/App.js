@@ -108,12 +108,13 @@ const UNESCOProjectGenerator = () => {
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Project Description *</label>
               <textarea
-                rows={4}
+                rows={6}
                 value={formData.description}
                 onChange={(e) => handleInputChange('description', e.target.value)}
                 className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Describe what the project will do and how it helps UNESCO's mission..."
+                placeholder="Example:&#10;&#10;The Global Skills Academy (GSA) dashboard will monitor youth empowerment initiatives.&#10;&#10;Key Features:&#10;- Data visualization and analytics&#10;- Integration with existing UNESCO systems&#10;- Real-time monitoring capabilities&#10;&#10;This project supports SDG 4 and UNESCO's commitment to youth empowerment."
               />
+              <p className="text-xs text-gray-500 mt-1">Use Enter to create line breaks and organize your description into paragraphs</p>
             </div>
           </div>
 
@@ -226,7 +227,7 @@ const UNESCOProjectGenerator = () => {
   return (
     <div className="max-w-4xl mx-auto bg-white p-8 font-sans text-gray-800">
       {/* Edit Button */}
-      <div className="text-right mb-4">
+      <div className="text-right mb-4 no-print">
         <button
           onClick={editForm}
           className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors text-sm"
@@ -297,7 +298,7 @@ const UNESCOProjectGenerator = () => {
         
         <div>
           <div className="font-semibold text-blue-700 text-sm mb-1">Project description:</div>
-          <div className="border border-gray-300 p-3 min-h-16 text-sm rounded">
+          <div className="border border-gray-300 p-3 min-h-16 text-sm rounded whitespace-pre-wrap">
             {formData.description}
           </div>
         </div>
@@ -429,13 +430,13 @@ const UNESCOProjectGenerator = () => {
             </div>
           </div>
           
-          <div className="bg-red-50 border border-red-200 p-4 mt-4 rounded">
+          <div className="bg-blue-50 border border-blue-200 p-4 mt-4 rounded">
             <div className="flex items-center">
-              <span className="text-red-500 mr-2">⚠️</span>
-              <div className="text-red-800 font-semibold">Timeline Alert:</div>
+              <span className="text-blue-600 mr-2">📝</span>
+              <div className="text-blue-800 font-semibold">Timeline Information:</div>
             </div>
-            <div className="text-red-700 text-sm mt-1">
-              Please provide the budget code at least <strong>1 week before</strong> your desired project start date to respect the {formData.targetCompletion ? new Date(formData.targetCompletion).toLocaleDateString('en-US', { 
+            <div className="text-blue-700 text-sm mt-1">
+              For smooth project delivery, please provide the budget code at least <strong>1 week before</strong> your desired project start date to meet the {formData.targetCompletion ? new Date(formData.targetCompletion).toLocaleDateString('en-US', { 
                 year: 'numeric', 
                 month: 'long', 
                 day: 'numeric' 
