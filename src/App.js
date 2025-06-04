@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const UNESCOProjectGenerator = () => {
   const [showForm, setShowForm] = useState(true);
@@ -32,6 +32,30 @@ const UNESCOProjectGenerator = () => {
 
   const totalCost = (parseFloat(formData.buildingCosts) || 0) + (parseFloat(formData.runningCosts) || 0);
   const sectorFunding = totalCost - (parseFloat(formData.regularSupport) || 0);
+
+  // Function to sanitize project name for filename
+  const sanitizeFileName = (name) => {
+    return name
+      .replace(/[^a-zA-Z0-9\s-]/g, '') // Remove special characters
+      .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+      .trim() // Remove leading/trailing spaces
+      .substring(0, 50); // Limit length
+  };
+
+  // Update document title for PDF naming
+  useEffect(() => {
+    if (!showForm && formData.projectName) {
+      const sanitizedName = sanitizeFileName(formData.projectName);
+      document.title = `${sanitizedName} - UNESCO Data AI Project Agreement`;
+    } else {
+      document.title = 'UNESCO Project Proposal Generator';
+    }
+    
+    // Cleanup: reset title when component unmounts
+    return () => {
+      document.title = 'UNESCO Project Proposal Generator';
+    };
+  }, [showForm, formData.projectName]);
 
   if (showForm) {
     return (
