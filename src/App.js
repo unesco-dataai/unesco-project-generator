@@ -365,52 +365,18 @@ const UNESCOProjectGenerator = () => {
         </div>
       </div>
 
-      {/* Section 4: What You'll Get */}
+      {/* Section 4: Next Steps - Budget Code */}
       <div className="mb-6">
         <div className="bg-blue-600 text-white p-3 font-semibold text-sm mb-4 rounded">
-          🎯 What you'll receive
-        </div>
-        
-        <div className="grid grid-cols-2 gap-4 text-sm">
-          <div className="flex items-center">
-            <span className="text-blue-600 mr-2">✓</span>
-            <span>Complete solution ready to use</span>
-          </div>
-          <div className="flex items-center">
-            <span className="text-blue-600 mr-2">✓</span>
-            <span>Works with your existing systems</span>
-          </div>
-          <div className="flex items-center">
-            <span className="text-blue-600 mr-2">✓</span>
-            <span>Multilingual support</span>
-          </div>
-          <div className="flex items-center">
-            <span className="text-blue-600 mr-2">✓</span>
-            <span>Training for your team</span>
-          </div>
-          <div className="flex items-center">
-            <span className="text-blue-600 mr-2">✓</span>
-            <span>Complete documentation</span>
-          </div>
-          <div className="flex items-center">
-            <span className="text-blue-600 mr-2">✓</span>
-            <span>3 months of support included</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Section 5: Next Steps - Budget Code */}
-      <div className="mb-6">
-        <div className="bg-orange-500 text-white p-3 font-semibold text-sm mb-4 rounded">
           🚀 Important: Budget Code Required
         </div>
         
-        <div className="bg-orange-50 border border-orange-200 p-6 rounded-lg">
-          <h3 className="text-orange-800 font-bold text-lg mb-3">Ready to start? Here's what happens next:</h3>
+        <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+          <h3 className="text-blue-800 font-bold text-lg mb-3">Ready to start? Here's what happens next:</h3>
           
           <div className="space-y-3 text-sm">
             <div className="flex items-start">
-              <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">1</span>
+              <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">1</span>
               <div>
                 <div className="font-semibold">Sign this agreement</div>
                 <div className="text-gray-600">Both you and our team sign below</div>
@@ -418,7 +384,7 @@ const UNESCOProjectGenerator = () => {
             </div>
             
             <div className="flex items-start">
-              <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">2</span>
+              <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">2</span>
               <div>
                 <div className="font-semibold">Provide your budget code</div>
                 <div className="text-gray-600">Fill in the budget code section below</div>
@@ -426,7 +392,7 @@ const UNESCOProjectGenerator = () => {
             </div>
             
             <div className="flex items-start">
-              <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">3</span>
+              <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">3</span>
               <div>
                 <div className="font-semibold">We start building!</div>
                 <div className="text-gray-600">Project begins within 1 week of receiving your budget code</div>
@@ -450,7 +416,7 @@ const UNESCOProjectGenerator = () => {
         </div>
       </div>
 
-      {/* Section 6: Agreement */}
+      {/* Section 5: Agreement */}
       <div className="mb-6">
         <div className="bg-blue-600 text-white p-3 font-semibold text-sm mb-4 rounded">
           📝 Let's make it official
