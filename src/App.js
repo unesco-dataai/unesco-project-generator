@@ -101,6 +101,11 @@ const UNESCOProjectGenerator = () => {
                   <option value="Education">Education</option>
                   <option value="Culture">Culture</option>
                   <option value="Science">Science</option>
+                  <option value="Social & Human Sciences">Social & Human Sciences</option>
+                  <option value="Communication and Information">Communication and Information</option>
+                  <option value="Secretariat of the Governing Bodies">Secretariat of the Governing Bodies</option>
+                  <option value="Administration and Management">Administration and Management</option>
+                  <option value="Priority Africa and External Relations">Priority Africa and External Relations</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
