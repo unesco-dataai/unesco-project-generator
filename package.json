@@ -1,8 +1,8 @@
 {
   "name": "unesco-project-generator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "https://kevngzc.github.io/unesco-project-generator",
+  "homepage": "https://unesco-dataai.github.io/unesco-project-generator",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
