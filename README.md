@@ -145,7 +145,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For questions or support:
 - Create an issue in this repository
 - Contact the Data & AI Services team
-- Email: [data-ai@unesco.org](mailto:data-ai@unesco.org)
+- Email: [data.ai@unesco.org](mailto:data-ai@unesco.org)
 
 ## 🔄 Version History
 
