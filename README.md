@@ -1,6 +1,6 @@
 # UNESCO Project Proposal Generator
 
-A simple, user-friendly tool for creating project agreements between UNESCO sectors and Central Services (Data & AI Services team).
+A simple, user-friendly tool for creating project agreements between UNESCO sectors and DBS (Data & AI Services team).
 
 ## 🎯 Purpose
 
@@ -32,7 +32,7 @@ This tool streamlines the process of creating project proposals for innovative A
 
 ### Key Benefits
 - **KISS Principle**: Simple, straightforward process
-- **Budget Transparency**: Clear distinction between sector funding and Central Services support
+- **Budget Transparency**: Clear distinction between sector funding and DBS support
 - **Process Clarity**: Step-by-step workflow with timeline requirements
 - **PDF Ready**: Professional output ready for printing/saving
 
@@ -101,7 +101,7 @@ npm run deploy
 
 The tool helps clarify UNESCO's funding model:
 
-- **Regular IT Support**: Covered by Central Services regular budget
+- **Regular IT Support**: Covered by DBS regular budget
   - Basic infrastructure
   - Standard maintenance
   - Daily operational support
@@ -138,7 +138,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **UNESCO Data & AI Services Team**
 - Digital Business Solutions (DBS)
-- Central Services
+- DBS
 
 ## 📞 Support
 

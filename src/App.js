@@ -212,7 +212,7 @@ const UNESCOProjectGenerator = () => {
                   className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   placeholder="1500"
                 />
-                <p className="text-xs text-gray-500 mt-1">Covered by Central Services</p>
+                <p className="text-xs text-gray-500 mt-1">Covered by DBS</p>
               </div>
             </div>
 
@@ -277,7 +277,7 @@ const UNESCOProjectGenerator = () => {
       <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8 rounded-r-lg">
         <h2 className="text-lg font-semibold text-blue-800 mb-3">About This Agreement</h2>
         <p className="text-sm text-gray-700 mb-3">
-          UNESCO's Central Services provides regular IT support through our standard budget to help sectors with their daily activities. 
+          UNESCO's DBS provides regular IT support through our standard budget to help sectors with their daily activities. 
           This includes basic infrastructure, maintenance, and standard tools.
         </p>
         <p className="text-sm text-gray-700">
@@ -378,7 +378,7 @@ const UNESCOProjectGenerator = () => {
               <td className="border border-gray-300 p-3 text-right font-semibold">${totalCost.toLocaleString()}</td>
             </tr>
             <tr>
-              <td className="border border-gray-300 p-3">Amount covered by Central Services</td>
+              <td className="border border-gray-300 p-3">Amount covered by DBS</td>
               <td className="border border-gray-300 p-3 text-right font-semibold text-green-600">-${(parseFloat(formData.regularSupport) || 0).toLocaleString()}</td>
             </tr>
             <tr className="bg-blue-50">
@@ -390,7 +390,7 @@ const UNESCOProjectGenerator = () => {
         
         <div className="bg-green-50 border-l-4 border-green-500 p-4 text-sm rounded-r">
           <div className="font-semibold text-green-800">Good news!</div>
-          <div className="text-green-700">After year 1, ongoing costs are just ${(parseFloat(formData.runningCosts) || 0).toLocaleString()}/year. Central Services continues to cover basic IT support.</div>
+          <div className="text-green-700">As of January 1 of the year following project delivery, DBS continues to cover basic IT support. Note that ongoing costs may vary over time.</div>
         </div>
       </div>
 
@@ -466,7 +466,7 @@ const UNESCOProjectGenerator = () => {
             
             <div>
               <div className="border-b-2 border-gray-400 mb-2 h-1"></div>
-              <div className="text-xs text-gray-600 mb-4">Central Services Representative</div>
+              <div className="text-xs text-gray-600 mb-4">DBS Representative</div>
               <div className="text-xs space-y-2">
                 <div><span className="font-semibold">Name:</span> ________________________________</div>
                 <div><span className="font-semibold">Date:</span> ________________________________</div>
@@ -504,7 +504,7 @@ const UNESCOProjectGenerator = () => {
 
       {/* Footer */}
       <div className="bg-blue-600 text-white text-center p-4 -mx-8 text-xs">
-        UNESCO Data & AI Services - Central Services<br />
+        UNESCO Data & AI Services - DBS<br />
         Building the future of education, science, and culture through technology
       </div>
 
