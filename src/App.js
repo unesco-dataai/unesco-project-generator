@@ -473,7 +473,7 @@ const UNESCOProjectGenerator = () => {
             </div>
 
             <div className="border border-gray-300 p-3 text-xs rounded bg-gray-50">
-              <p className="text-gray-700">As of the 1st of January of the year following project delivery, DBS will continue to provide basic IT support and maintenance, which will be funded through the running cost. Re-invoicing for the running cost will take place on the 1st of January, and our team will contact you at that time to coordinate the process.</p>
+              <p className="text-gray-700">As of the 1st of January of the year following project delivery, DBS will continue to provide basic IT support and maintenance, which will be funded through the running costs. Please note that running costs are subject to change due to licensing and hosting price fluctuations.</p>
             </div>
           </>
         )}
