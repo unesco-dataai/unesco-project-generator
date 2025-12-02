@@ -434,7 +434,7 @@ const UNESCOProjectGenerator = () => {
                 <td className="border border-gray-300 p-2 text-right font-semibold text-green-600 text-xs">-${(parseFloat(formData.buildRegularSupport) || 0).toLocaleString()}</td>
               </tr>
               <tr className="bg-blue-50">
-                <td className="border border-gray-300 p-2 font-bold text-xs">Total Building Cost</td>
+                <td className="border border-gray-300 p-2 font-bold text-xs">Total Build Cost</td>
                 <td className="border border-gray-300 p-2 text-right font-bold text-sm">${((parseFloat(formData.buildingCosts) || 0) - (parseFloat(formData.buildRegularSupport) || 0)).toLocaleString()}</td>
               </tr>
             </tbody>
