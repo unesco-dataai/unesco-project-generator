@@ -559,7 +559,7 @@ const UNESCOProjectGenerator = () => {
         <div className="border-2 border-blue-500 p-3 rounded-lg bg-blue-50 mb-4">
           <h3 className="text-blue-800 font-bold mb-3 flex items-center text-xs">
             <span className="mr-2">💼</span>
-            {(parseFloat(formData.buildingCosts) || 0) === 0 ? 'Reinvoicing' : 'Building Reinvoicing'}
+            {(parseFloat(formData.buildingCosts) || 0) === 0 ? 'Reinvoicing' : 'Build Reinvoicing'}
           </h3>
 
           <div className="bg-white border-2 border-blue-600 p-3 rounded">
