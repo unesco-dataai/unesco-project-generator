@@ -365,16 +365,16 @@ const UNESCOProjectGenerator = () => {
 
         <div className="grid grid-cols-2 gap-4 mb-3">
           <div>
-            <div className="font-semibold text-blue-700 text-xs mb-1">What we're building:</div>
+            <div className="font-semibold text-blue-700 text-xs mb-1">Service type:</div>
             <div className="border-b border-gray-300 pb-1 min-h-5 text-xs">{formData.serviceType}</div>
           </div>
           <div>
             <div className="font-semibold text-blue-700 text-xs mb-1">Target completion:</div>
             <div className="border-b border-gray-300 pb-1 min-h-5 text-xs">
-              {formData.targetCompletion ? new Date(formData.targetCompletion).toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
+              {formData.targetCompletion ? new Date(formData.targetCompletion).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
               }) : ''}
             </div>
           </div>
