@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/unesco-project-generator/static/js/main.6e329f69.js",
+    "main.js": "/unesco-project-generator/static/js/main.3c0815ac.js",
     "index.html": "/unesco-project-generator/index.html",
-    "main.6e329f69.js.map": "/unesco-project-generator/static/js/main.6e329f69.js.map"
+    "main.3c0815ac.js.map": "/unesco-project-generator/static/js/main.3c0815ac.js.map"
   },
   "entrypoints": [
-    "static/js/main.6e329f69.js"
+    "static/js/main.3c0815ac.js"
   ]
 }
