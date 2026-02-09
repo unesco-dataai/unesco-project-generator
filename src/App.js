@@ -9,6 +9,7 @@ const UNESCOProjectGenerator = () => {
     targetCompletion: '',
     description: '',
     riskAssumptions: '',
+    intersectoralLinkage: '',
     transactionId: '',
     contactName: '',
     contactEmail: '',
@@ -172,6 +173,18 @@ const UNESCOProjectGenerator = () => {
             </div>
 
             <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Intersectoral Linkage *</label>
+              <textarea
+                rows={4}
+                value={formData.intersectoralLinkage}
+                onChange={(e) => handleInputChange('intersectoralLinkage', e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Example:&#10;&#10;This project will collaborate with:&#10;• Communication and Information sector for media outreach&#10;• Education sector for capacity building initiatives&#10;• Science sector for data methodology validation&#10;&#10;Expected synergies include shared data resources and joint reporting mechanisms."
+              />
+              <p className="text-xs text-gray-500 mt-1">Use **text** for bold, *text* for italic, __text__ for underline</p>
+            </div>
+
+            <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Transaction ID *</label>
               <input
                 type="text"
@@ -282,7 +295,7 @@ const UNESCOProjectGenerator = () => {
           <div className="text-center">
             <button
               onClick={generateProposal}
-              disabled={!formData.projectName || !formData.serviceType || !formData.transactionId || formData.transactionId.length !== 3 || !formData.contactName || !formData.contactEmail || !formData.buildingCosts || !formData.runningCosts}
+              disabled={!formData.projectName || !formData.serviceType || !formData.transactionId || formData.transactionId.length !== 3 || !formData.contactName || !formData.contactEmail || !formData.buildingCosts || !formData.runningCosts || !formData.intersectoralLinkage}
               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
             >
               Generate Project Proposal
@@ -379,16 +392,22 @@ const UNESCOProjectGenerator = () => {
       {/* Section 1b: Risks & Assumptions (conditional) */}
       {formData.riskAssumptions && (
         <div className="mb-4">
-          <div className="text-white p-2 font-semibold text-xs mb-3 rounded" style={{ backgroundColor: '#F5AD18' }}>
-            ⚠️ Risks & Assumptions
-          </div>
-
+          <div className="font-semibold text-blue-700 text-xs mb-1">Risks & Assumptions:</div>
           <div
             className="border border-gray-300 p-2 min-h-12 text-xs rounded whitespace-pre-wrap"
             dangerouslySetInnerHTML={{ __html: renderFormattedText(formData.riskAssumptions) }}
           />
         </div>
       )}
+
+      {/* Section 1c: Intersectoral Linkage */}
+      <div className="mb-4">
+        <div className="font-semibold text-blue-700 text-xs mb-1">Intersectoral Linkage:</div>
+        <div
+          className="border border-gray-300 p-2 min-h-12 text-xs rounded whitespace-pre-wrap"
+          dangerouslySetInnerHTML={{ __html: renderFormattedText(formData.intersectoralLinkage) }}
+        />
+      </div>
 
       {/* Section 2: Contact Information */}
       <div className="mb-4">
