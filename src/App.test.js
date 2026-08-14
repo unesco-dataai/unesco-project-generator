@@ -6,6 +6,7 @@ import App from './App';
 const fillRequiredFields = () => {
   fireEvent.change(screen.getByPlaceholderText('e.g., Her Atlas AI Chat'), { target: { value: 'Test Project' } });
   fireEvent.change(screen.getByPlaceholderText('e.g., AI Chat Solutions'), { target: { value: 'AI Chat' } });
+  fireEvent.change(screen.getByPlaceholderText(/This project will collaborate with/), { target: { value: 'Education sector' } });
   fireEvent.change(screen.getByPlaceholderText('e.g., 001'), { target: { value: '001' } });
   fireEvent.change(screen.getByPlaceholderText('e.g., Aguiar, Nina'), { target: { value: 'Doe, Jane' } });
   fireEvent.change(screen.getByPlaceholderText('e.g., n.aguiar@unesco.org'), { target: { value: 'j.doe@unesco.org' } });
