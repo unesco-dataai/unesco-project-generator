@@ -44,9 +44,6 @@ const UNESCOProjectGenerator = () => {
     setShowForm(true);
   };
 
-  const totalCost = (parseFloat(formData.buildingCosts) || 0) + (parseFloat(formData.runningCosts) || 0);
-  const sectorFunding = totalCost - (parseFloat(formData.regularSupport) || 0);
-
   // Function to sanitize project name for filename
   const sanitizeFileName = (name) => {
     return name
@@ -465,7 +462,7 @@ const UNESCOProjectGenerator = () => {
           <>
             <div className="mb-3">
               <h4 className="text-xs font-semibold text-gray-700 mb-2">
-                Annual Running Cost starting in January {formData.targetCompletion ? new Date(formData.targetCompletion).getFullYear() + 1 : new Date().getFullYear() + 1}
+                Annual Running Cost invoiced every January
               </h4>
               <table className="w-full border-collapse mb-3 rounded overflow-hidden shadow-sm">
                 <thead>
