@@ -75,13 +75,19 @@ npm run deploy     # Deploy to GitHub Pages
 
 ## 📦 Deployment
 
-### Automatic Deployment
-The project automatically deploys to GitHub Pages when changes are pushed to the main branch.
+The deployed site is **password-protected** with [StatiCrypt](https://github.com/robinmoisson/staticrypt): the production bundle is inlined into `index.html` and AES-encrypted, then decrypted in the browser once the password is entered. No application code is served unencrypted.
 
-### Manual Deployment
 ```bash
-npm run deploy
+cp .env.example .env               # once; set STATICRYPT_PASSWORD=<shared password>
+npm run deploy                     # build → inline + encrypt (scripts/encrypt-build.js) → push to gh-pages
 ```
+
+- Deploy refuses to run if `STATICRYPT_PASSWORD` is not set (environment or `.env`).
+- **Change the password**: update `.env` and redeploy. Users who ticked "Remember me" (30 days) are asked again.
+- `.staticrypt.json` holds the encryption salt (not secret) — keep it committed so "Remember me" survives redeploys.
+- The password must be at least 14 characters (the deploy refuses shorter ones) — use random characters: the encrypted page is public and can be brute-forced offline.
+- The source code in this repository is not protected by this — only the deployed page.
+- Local `npm start` / `npm run build` are unaffected (no password).
 
 ## 📖 How to Use
 

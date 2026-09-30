@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "GENERATE_SOURCEMAP=false npm run build && node scripts/encrypt-build.js",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "dotenv": "^18.0.5",
+    "gh-pages": "^6.3.0",
+    "staticrypt": "^3.5.4"
   }
 }
