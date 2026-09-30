@@ -77,9 +77,9 @@ Hardcoded as `<option>` elements in [src/App.js](src/App.js:114-122) (9 sectors,
 
 ## Deployment
 
-The application is deployed to GitHub Pages automatically. The `homepage` field in [package.json](package.json:5) is set to `https://unesco-dataai.github.io/unesco-project-generator`.
+The application is deployed to GitHub Pages. The `homepage` field in [package.json](package.json:5) is set to `https://unesco-dataai.github.io/unesco-project-generator`.
 
-**Manual deployment**: `npm run deploy` (runs predeploy build script then deploys to gh-pages branch)
+**Deployment is manual only** (no CI): `npm run deploy`. `predeploy` builds with `GENERATE_SOURCEMAP=false`, then runs [scripts/encrypt-build.js](scripts/encrypt-build.js), which inlines `static/js/main.*.js` into `build/index.html`, deletes the inlined bundles + `asset-manifest.json`, and encrypts `index.html` in place with StatiCrypt. Password comes from `STATICRYPT_PASSWORD` (env or `.env`); the script fails closed if it's missing or under 14 chars, and deletes `index.html` if StatiCrypt did not encrypt it. Replacements use functions, not strings — the minified bundle contains `$$`/`$&`. Anything left in `build/static` besides `*.LICENSE.txt` aborts the deploy. `.staticrypt.json` (salt) is committed on purpose. If CRA's output format changes (e.g. CSS files, extra chunks), check the script still leaves no plaintext bundle in `build/`.
 
 ## Testing
 
